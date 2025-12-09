@@ -1,0 +1,6 @@
+def stage4_subgoal_constraint1(end_effector, keypoints):
+    """The apple (keypoint 0) is placed inside the pen holder (keypoint 2)."""
+    offsetted_point = keypoints[2] + np.array([0, 0, 50])  # 50mm above the pen holder surface
+    cost = np.linalg.norm(keypoints[0] - offsetted_point)
+    return cost
+

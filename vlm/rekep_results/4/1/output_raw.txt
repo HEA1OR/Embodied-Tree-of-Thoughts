@@ -1,0 +1,35 @@
+```python
+# Explanation:
+# The task "close the drawer" involves two stages:
+# 1. Grasp the drawer (keypoint 1).
+# 2. Slide the drawer to the closed position.
+
+num_stages = 2
+
+### stage 1 sub-goal constraints (grasp the drawer)
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the drawer (keypoint 1)."""
+    drawer_keypoint = keypoints[1]
+    cost = np.linalg.norm(end_effector - drawer_keypoint)
+    return cost
+
+### stage 1 path constraints
+# No path constraints for grasping stage
+
+### stage 2 sub-goal constraints (slide the drawer to the closed position)
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """The drawer (keypoint 1) should be aligned with the closed position, assumed to be 
+    offset from its original position."""
+    offsetted_point = keypoints[1] - np.array([100, 0, 0])  # Assuming the closed position is 100mm to the left
+    cost = np.linalg.norm(keypoints[1] - offsetted_point)
+    return cost
+
+### stage 2 path constraints
+def stage2_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the drawer (keypoint 1)."""
+    return get_grasping_cost_by_keypoint_idx(1)
+
+# Grasping keypoints and release keypoints
+grasp_keypoints = [1, -1]
+release_keypoints = [-1, 1]
+```

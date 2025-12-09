@@ -1,0 +1,9 @@
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """The pen should be 150mm above the holder opening."""
+    holder_center = keypoints[1]
+    pen_tip = keypoints[4]
+    target_height = 150
+    offsetted_point = holder_center + np.array([0, 0, target_height])
+    cost = np.linalg.norm(pen_tip - offsetted_point)
+    return cost
+

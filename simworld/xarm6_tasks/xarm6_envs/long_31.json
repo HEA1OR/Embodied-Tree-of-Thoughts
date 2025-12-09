@@ -1,0 +1,415 @@
+{
+    "metadata": {},
+    "state": {
+        "system_registry": {},
+        "object_registry": {
+            "floors_ptwlei_0": {
+                "root_link": {
+                    "pos": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ori": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            },
+            "holder_1": {
+                "root_link": {
+                    "pos": [
+                        0.574118971824646,
+                        0.25523313879966736,
+                        1.1380478143692017
+                    ],
+                    "ori": [
+                        0.67802894115448,
+                        -0.2017156481742859,
+                        -0.20153899490833282,
+                        0.6774729490280151
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            },
+            "drawer": {
+                "root_link": {
+                    "pos": [
+                        0.44709813594818115,
+                        0.022560589015483856,
+                        1.2057509422302246
+                    ],
+                    "ori": [
+                        0.6163248419761658,
+                        0.36521124839782715,
+                        0.35291585326194763,
+                        0.6018429398536682
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "joint_pos": [
+                    0.025631442666053772
+                ],
+                "joint_vel": [
+                    2.0247994253486112e-11
+                ],
+                "joint_eff": [
+                    -4.491312211030163e-08
+                ],
+                "non_kin": {}
+            },
+            "xarm6": {
+                "root_link": {
+                    "pos": [
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "ori": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "joint_pos": [
+                    8.799695933703333e-06,
+                    -0.5759905576705933,
+                    -1.0,
+                    -1.802874612621963e-05,
+                    1.5707823038101196,
+                    1.588776103744749e-05,
+                    0.849999189376831,
+                    0.8499999642372131,
+                    0.8500000238418579,
+                    0.849999189376831,
+                    0.8499999642372131,
+                    0.8499999642372131
+                ],
+                "joint_vel": [
+                    -6.312924938356446e-08,
+                    8.271029946627095e-05,
+                    -7.571587048005313e-05,
+                    -1.1341177241774858e-07,
+                    7.986704440554604e-05,
+                    -1.0796325113915373e-06,
+                    7.70404003560543e-05,
+                    -8.581110932937008e-09,
+                    -3.7481129311345285e-11,
+                    7.6793905464001e-05,
+                    -8.639351456452005e-09,
+                    -1.1169163684210393e-11
+                ],
+                "joint_eff": [
+                    4.34282185324264e-07,
+                    4.782156111104996e-07,
+                    -3.156589798436471e-07,
+                    5.552950810283619e-08,
+                    -2.4390836017573747e-08,
+                    7.420410952363454e-10,
+                    7.747345875941392e-09,
+                    1.3402051690647454e-09,
+                    -1.2671393934127195e-09,
+                    -6.3541749639739464e-09,
+                    -2.9037512394580745e-09,
+                    2.218156991418141e-09
+                ],
+                "controllers": {
+                    "arm_0": {
+                        "goal_is_valid": true,
+                        "goal": {
+                            "target_pos": [
+                                0.30936700105667114,
+                                -2.2967021777731134e-06,
+                                0.3524138927459717
+                            ],
+                            "target_ori_mat": [
+                                [
+                                    0.9999864101409912,
+                                    -7.488550636480795e-06,
+                                    0.0052080946043133736
+                                ],
+                                [
+                                    -7.358542006841162e-06,
+                                    -1.0,
+                                    -2.4982042305055074e-05
+                                ],
+                                [
+                                    0.0052080946043133736,
+                                    2.4943377866293304e-05,
+                                    -0.9999864101409912
+                                ]
+                            ]
+                        }
+                    },
+                    "gripper_0": {
+                        "goal_is_valid": true,
+                        "goal": {
+                            "target": [
+                                1.0
+                            ]
+                        }
+                    }
+                },
+                "non_kin": {}
+            },
+            "desk": {
+                "root_link": {
+                    "pos": [
+                        0.6593576669692993,
+                        0.1541491150856018,
+                        0.7878884077072144
+                    ],
+                    "ori": [
+                        0.00013026416127104312,
+                        -9.625310485716909e-05,
+                        0.009745835326611996,
+                        0.999952495098114
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            },
+            "apple": {
+                "root_link": {
+                    "pos": [
+                        0.5775556564331055,
+                        -0.06551632285118103,
+                        1.3310816287994385
+                    ],
+                    "ori": [
+                        0.744210958480835,
+                        0.07639791816473007,
+                        -0.5917467474937439,
+                        -0.30024853348731995
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            },
+            "tennis1": {
+                "root_link": {
+                    "pos": [
+                        0.5047553777694702,
+                        0.13904476165771484,
+                        1.136904001235962
+                    ],
+                    "ori": [
+                        0.12777569890022278,
+                        -0.10450781881809235,
+                        -0.05455562472343445,
+                        0.9847716689109802
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            }
+        }
+    },
+    "init_info": {
+        "class_module": "omnigibson.scenes.interactive_traversable_scene",
+        "class_name": "InteractiveTraversableScene",
+        "args": {
+            "scene_model": "Rs_int",
+            "scene_instance": null,
+            "scene_file": "/home/dell/workspace/xwj/Embodied-Tree-of-Thoughts/simworld/xarm6_rekep/xarm6_envs/long_31.json",
+            "trav_map_resolution": 0.1,
+            "default_erosion_radius": 0.0,
+            "trav_map_with_objects": true,
+            "num_waypoints": 10,
+            "waypoint_resolution": 0.2
+        }
+    },
+    "objects_info": {
+        "init_info": {
+            "floors_ptwlei_0": {
+                "class_module": "omnigibson.objects.dataset_object",
+                "class_name": "DatasetObject",
+                "args": {
+                    "name": "floors_ptwlei_0",
+                    "category": "floors",
+                    "model": "bryjan",
+                    "scale": [
+                        1.0,
+                        0.5,
+                        1.0
+                    ],
+                    "fixed_base": true,
+                    "in_rooms": [
+                        "living_room_0"
+                    ],
+                    "prim_path": "/World/floors_bryjan_0",
+                    "bddl_object_scope": null,
+                    "uuid": 62654673
+                }
+            },
+            "holder_1": {
+                "class_module": "omnigibson.objects.usd_object",
+                "class_name": "USDObject",
+                "args": {
+                    "name": "holder_1",
+                    "usd_path": "/home/dell/workspace/xwj/Embodied-Tree-of-Thoughts/simworld/assets/holder/holder_w.usd",
+                    "scale": [
+                        1.0,
+                        0.5,
+                        1.0
+                    ]
+                }
+            },
+            "drawer": {
+                "class_module": "omnigibson.objects.usd_object",
+                "class_name": "USDObject",
+                "args": {
+                    "name": "drawer",
+                    "usd_path": "/home/dell/workspace/xwj/Embodied-Tree-of-Thoughts/simworld/assets/two_drawer/two_drawer.usd",
+                    "scale": [
+                        0.2199999988079071,
+                        0.25,
+                        0.2199999988079071
+                    ],
+                    "fixed_base": true
+                }
+            },
+            "xarm6": {
+                "class_module": "omnigibson.robots.xarm6",
+                "class_name": "xarm6",
+                "args": {
+                    "name": "xarm6",
+                    "controller_config": {
+                        "arm_0": {
+                            "name": "OperationalSpaceController",
+                            "kp": 250,
+                            "kp_limits": [
+                                50,
+                                400
+                            ]
+                        },
+                        "gripper_0": {
+                            "name": "MultiFingerGripperController",
+                            "command_input_limits": [
+                                -1.0,
+                                1.0
+                            ],
+                            "mode": "binary"
+                        }
+                    },
+                    "action_normalize": false,
+                    "obs_modalities": [
+                        "rgb"
+                    ],
+                    "grasping_mode": "physical"
+                }
+            },
+            "desk": {
+                "class_module": "omnigibson.objects.dataset_object",
+                "class_name": "DatasetObject",
+                "args": {
+                    "name": "desk",
+                    "category": "desk",
+                    "model": "ccxuey",
+                    "scale": [
+                        1.399999976158142,
+                        1.2999999523162842,
+                        1.100000023841858
+                    ],
+                    "fixed_base": true
+                }
+            },
+            "apple": {
+                "class_module": "omnigibson.objects.usd_object",
+                "class_name": "USDObject",
+                "args": {
+                    "name": "apple",
+                    "usd_path": "/home/dell/workspace/xwj/Embodied-Tree-of-Thoughts/simworld/assets/apple_large/apple_large.usd",
+                    "scale": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ]
+                }
+            },
+            "tennis1": {
+                "class_module": "omnigibson.objects.usd_object",
+                "class_name": "USDObject",
+                "args": {
+                    "name": "tennis1",
+                    "usd_path": "/home/dell/workspace/xwj/Embodied-Tree-of-Thoughts/simworld/assets/tennis/tennis.usd",
+                    "scale": [
+                        0.03700000047683716,
+                        0.03700000047683716,
+                        0.03700000047683716
+                    ]
+                }
+            }
+        }
+    }
+}

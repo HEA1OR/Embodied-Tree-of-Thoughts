@@ -1,0 +1,7 @@
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """The pen (keypoint 0) is upright (parallel to the z-axis)."""
+    z_axis = np.array([0, 0, 1])
+    pen_orientation_vector = keypoints[0] - end_effector  # Assume the pen's other end is held by end-effector
+    pen_orientation_vector /= np.linalg.norm(pen_orientation_vector)  # Normalize the vector
+    return np.dot(pen_orientation_vector, z_axis) - 0.95  # Allowing a small orientation error
+

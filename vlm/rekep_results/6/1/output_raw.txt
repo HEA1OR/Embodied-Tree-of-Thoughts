@@ -1,0 +1,68 @@
+```python
+# Explanation:
+
+# The task involves three main stages:
+# 1. Grasp the apple (keypoint 0)
+# 2. Place the apple inside the pen holder (keypoint 2)
+# 3. Place the pen holder with the apple on the drawer (keypoint 1)
+
+num_stages = 3
+
+### stage 1 sub-goal constraints (grasp the apple)
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the apple (keypoint 0)."""
+    apple_position = keypoints[0]
+    cost = np.linalg.norm(end_effector - apple_position)
+    return cost
+
+# No path constraints needed for stage 1
+# ...
+
+### stage 2 sub-goal constraints (place the apple inside the pen holder)
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """Place the apple (keypoint 0) inside the pen holder (keypoint 2)."""
+    pen_holder_position = keypoints[2]
+    apple_position = keypoints[0]
+    offsetted_pen_holder = pen_holder_position + [0, -100, 0]  # Assume the apple is 100mm above the pen holder's base point
+    cost = np.linalg.norm(apple_position - offsetted_pen_holder)
+    return cost
+
+### stage 2 path constraints 
+def stage2_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the apple."""
+    return get_grasping_cost_by_keypoint_idx(0)
+
+# ...
+
+### stage 3 sub-goal constraints (place the pen holder with the apple on the drawer)
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """Place the pen holder (keypoint 2) with the apple on the drawer (keypoint 1)."""
+    drawer_position = keypoints[1]
+    pen_holder_position = keypoints[2]
+    offsetted_drawer = drawer_position + [0, 100, 0]  # Assume the pen holder with the apple is 100mm above the drawer's surface
+    cost = np.linalg.norm(pen_holder_position - offsetted_drawer)
+    return cost
+
+### stage 3 path constraints 
+def stage3_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen holder."""
+    return get_grasping_cost_by_keypoint_idx(2)
+
+# ...
+
+"""
+Summarize keypoints to be grasped in all grasping stages.
+The length of the list should be equal to the number of stages.
+For grasping stage, write the keypoint index. For non-grasping stage, write -1.
+"""
+grasp_keypoints = [0, -1, 2]
+
+"""
+Summarize at **the end of which stage** the robot should release the keypoints.
+The keypoint indices must appear in an earlier stage as defined in `grasp_keypoints` (i.e., a keypoint can only be released only if it has been grasped previously).
+Only release object when it's necessary to complete the task, e.g., drop bouquet in the vase.
+The length of the list should be equal to the number of stages.
+If a keypoint is to be released at the end of a stage, write the keypoint index at the corresponding location. Otherwise, write -1.
+"""
+release_keypoints = [-1, 0, 2]
+```

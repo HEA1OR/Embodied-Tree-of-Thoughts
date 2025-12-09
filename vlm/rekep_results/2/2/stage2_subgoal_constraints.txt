@@ -1,0 +1,14 @@
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """Ensure the pen is upright (parallel to the z-axis)"""
+    pen_vector = keypoints[0] - end_effector
+    vertical_vector = np.array([0, 0, 1])
+    
+    # The cost is the angle between the pen vector and the vertical vector
+    dot_product = np.dot(pen_vector, vertical_vector)
+    pen_vector_magnitude = np.linalg.norm(pen_vector)
+    vertical_vector_magnitude = np.linalg.norm(vertical_vector)
+    cost = dot_product / (pen_vector_magnitude * vertical_vector_magnitude)
+    
+    # The desired condition is that the pen vector is parallel to the vertical vector
+    return 1 - cost  # Cost is zero when vectors are parallel (dot product is 1)
+

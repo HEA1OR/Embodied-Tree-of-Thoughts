@@ -1,0 +1,8 @@
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """Place the pen holder (keypoint 2) with the apple on the drawer (keypoint 1)."""
+    drawer_position = keypoints[1]
+    pen_holder_position = keypoints[2]
+    offsetted_drawer = drawer_position + [0, 100, 0]  # Assume the pen holder with the apple is 100mm above the drawer's surface
+    cost = np.linalg.norm(pen_holder_position - offsetted_drawer)
+    return cost
+

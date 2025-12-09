@@ -1,0 +1,12 @@
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """The pen (keypoint 0) is 150mm above the holder opening (keypoint 1)."""
+    offsetted_position = keypoints[1] + np.array([0, 0, 150])
+    return np.linalg.norm(keypoints[0] - offsetted_position) - 10  # Allowing 10mm error for drop position
+
+def stage3_subgoal_constraint2(end_effector, keypoints):
+    """The pen (keypoint 0) must still stay upright (parallel to the z-axis)."""
+    z_axis = np.array([0, 0, 1])
+    pen_orientation_vector = keypoints[0] - end_effector
+    pen_orientation_vector /= np.linalg.norm(pen_orientation_vector)
+    return np.dot(pen_orientation_vector, z_axis) - 0.95
+

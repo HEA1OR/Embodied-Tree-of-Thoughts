@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<robot name="single_object">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1.0" />
+            <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="visual/object_visual.obj" />
+            </geometry>
+            <material name="object_material">
+                <color rgba="0.8 0.8 0.8 1.0" />
+            </material>
+        </visual>
+        <collision name="collision_0">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_0.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_1">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_1.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_2">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_2.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_3">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_3.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_4">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_4.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_5">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_5.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_6">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_6.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_7">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_7.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_8">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_8.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_9">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_9.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_10">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_10.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_11">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_11.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_12">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_12.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_13">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_13.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_14">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_14.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_15">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_15.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_16">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_16.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_17">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_17.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_18">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_18.obj" />
+            </geometry>
+        </collision>
+        <collision name="collision_19">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="collision/object_19.obj" />
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,6 @@
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """The microwave door (keypoint 0) should be pulled 150mm outward along the x-axis."""
+    microwave_handle = keypoints[0]
+    offsetted_point = microwave_handle + np.array([150, 0, 0])
+    return np.linalg.norm(end_effector - offsetted_point)
+

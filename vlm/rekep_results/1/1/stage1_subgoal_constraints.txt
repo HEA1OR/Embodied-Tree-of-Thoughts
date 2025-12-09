@@ -1,0 +1,5 @@
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the microwave handle (keypoint 0)."""
+    microwave_handle = keypoints[0]
+    return np.linalg.norm(end_effector - microwave_handle)
+

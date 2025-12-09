@@ -1,0 +1,463 @@
+<?xml version="1.0" ?>
+<robot name="object">
+    <link name="part_0">
+        <inertial>
+            <mass value="10" />
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+        </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_0.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_1.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_2.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_3.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_4.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_5.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_6.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_7.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_8.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_9.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_10.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_11.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_12.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_13.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_14.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_15.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_16.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_17.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_18.obj" />
+            </geometry>
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_0/mesh.obj" />
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_0_19.obj" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="part_1">
+        <inertial>
+            <mass value="10" />
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+        </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_0.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_1.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_2.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_3.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_4.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_5.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_6.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_7.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_8.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_9.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_10.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_11.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_12.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_13.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_14.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_15.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_16.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_17.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_18.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+        <visual>
+            <geometry>
+                <mesh filename="visual/part_1/mesh.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/part_1_19.obj" />
+            </geometry>
+            <origin xyz="-1.004641 0.196198 -0.278002" />
+        </collision>
+    </link>
+    <joint name="part_1_joint" type="revolute">
+        <origin xyz="1.004641 -0.196198 0.278002" />
+        <axis xyz="-0.027396 -0.050794 0.998333" />
+        <parent link="part_0" />
+        <child link="part_1" />
+        <limit effort="1000" lower="-3.14" upper="3.14" velocity="1000" />
+        <dynamics damping="0.1" friction="0.1" />
+    </joint>
+</robot>

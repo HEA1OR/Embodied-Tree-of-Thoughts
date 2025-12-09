@@ -1,0 +1,93 @@
+## Explanation
+The task "reorient the pen and drop it into a holder" involves three stages:
+1. Grasp the pen
+2. Reorient the pen
+3. Drop the pen into the holder
+
+### Stage Descriptions
+1. **Grasp the pen:**
+   - The end-effector should align with the pen (keypoint 0).
+2. **Reorient the pen:**
+   - The pen should be upright (perpendicular to the table surface).
+3. **Drop the pen into the holder:**
+   - The pen should be held 150mm above the holder opening (keypoint 2).
+   - Release the pen into the holder.
+
+Here's how the constraints for each stage are defined in code:
+
+```python
+import numpy as np
+
+num_stages = 3
+
+### stage 1 sub-goal constraints
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the pen keypoint 0."""
+    return np.linalg.norm(end_effector - keypoints[0])  # Cost is the distance between the end-effector and keypoint 0
+
+### stage 1 path constraints
+# No path constraints needed for grasping stage
+
+### stage 2 sub-goal constraints
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """Ensure the pen is upright (parallel to the z-axis)"""
+    pen_vector = keypoints[0] - end_effector
+    vertical_vector = np.array([0, 0, 1])
+    
+    # The cost is the angle between the pen vector and the vertical vector
+    dot_product = np.dot(pen_vector, vertical_vector)
+    pen_vector_magnitude = np.linalg.norm(pen_vector)
+    vertical_vector_magnitude = np.linalg.norm(vertical_vector)
+    cost = dot_product / (pen_vector_magnitude * vertical_vector_magnitude)
+    
+    # The desired condition is that the pen vector is parallel to the vertical vector
+    return 1 - cost  # Cost is zero when vectors are parallel (dot product is 1)
+
+### stage 2 path constraints
+def stage2_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen handle (keypoint 0)."""
+    return get_grasping_cost_by_keypoint_idx(0)  # Ensures the pen is still grasped
+
+### stage 3 sub-goal constraints
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """Pen is 150mm above the holder opening (keypoint 2)."""
+    # Desired position is 150mm above keypoint 2
+    offsetted_position = keypoints[2] + np.array([0, 0, 150])
+
+    return np.linalg.norm(end_effector - offsetted_position)  # Cost is the distance between the end-effector and the desired position
+
+def stage3_subgoal_constraint2(end_effector, keypoints):
+    """Pen must stay upright (parallel to the z-axis)."""
+    pen_vector = keypoints[0] - end_effector
+    vertical_vector = np.array([0, 0, 1])
+    
+    # The cost is the angle between the pen vector and the vertical vector
+    dot_product = np.dot(pen_vector, vertical_vector)
+    pen_vector_magnitude = np.linalg.norm(pen_vector)
+    vertical_vector_magnitude = np.linalg.norm(vertical_vector)
+    cost = dot_product / (pen_vector_magnitude * vertical_vector_magnitude)
+    
+    # The desired condition is that the pen vector is parallel to the vertical vector
+    return 1 - cost  # Cost is zero when vectors are parallel (dot product is 1)
+
+### stage 3 path constraints
+def stage3_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen handle (keypoint 0)."""
+    return get_grasping_cost_by_keypoint_idx(0)  # Ensures the pen is still grasped
+
+"""
+Summarize keypoints to be grasped in all grasping stages.
+The length of the list should be equal to the number of stages.
+For grasping stage, write the keypoint index. For non-grasping stage, write -1.
+"""
+grasp_keypoints = [0, -1, -1]
+
+"""
+Summarize at **the end of which stage** the robot should release the keypoints.
+The keypoint indices must appear in an earlier stage as defined in `grasp_keypoints` (i.e., a keypoint can only be released only if it has been grasped previously).
+Only release object when it's necessary to complete the task, e.g., drop bouquet in the vase.
+The length of the list should be equal to the number of stages.
+If a keypoint is to be released at the end of a stage, write the keypoint index at the corresponding location. Otherwise, write -1.
+"""
+release_keypoints = [-1, -1, 0]
+```

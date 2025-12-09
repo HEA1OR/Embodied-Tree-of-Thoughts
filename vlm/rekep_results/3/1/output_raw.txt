@@ -1,0 +1,48 @@
+To accomplish the task "pick up the holder", only one stage is involved: grasping the holder. Therefore, the task can be broken down as follows:
+
+1. Grasp the holder.
+
+Let's define the constraints for this single stage:
+
+- Sub-goal constraints
+  - Align the end-effector with the holder (marked by keypoint 0).
+
+- Path constraints
+  - None for this stage since it's purely a grasping action.
+
+Here's the structured Python code to implement the constraints:
+
+```python
+num_stages = 1
+
+### stage 1 sub-goal constraints (if any)
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the holder keypoint 0."""
+    keypoint_0 = keypoints[0]
+    cost = np.linalg.norm(end_effector - keypoint_0)
+    return cost
+
+### stage 1 path constraints (if any)
+# No path constraints are needed for this stage.
+
+"""
+Summarize keypoints to be grasped in all grasping stages.
+The length of the list should be equal to the number of stages.
+For grasping stage, write the keypoint index. For non-grasping stage, write -1.
+"""
+grasp_keypoints = [0]
+
+"""
+Summarize at **the end of which stage** the robot should release the keypoints.
+The keypoint indices must appear in an earlier stage as defined in `grasp_keypoints` (i.e., a keypoint can only be released only if it has been grasped previously).
+Only release object when it's necessary to complete the task, e.g., drop bouquet in the vase.
+The length of the list should be equal to the number of stages. If a keypoint is to be released at the end of a stage, write the keypoint index at the corresponding location. Otherwise, write -1.
+"""
+release_keypoints = [-1]
+```
+
+Explanation:
+- Since there is only one stage (grasping the holder), we define a sub-goal constraint for aligning the end-effector with the keypoint of the holder.
+- No path constraints are necessary for this stage as it is a simple grasping action.
+- The grasp keypoint index is `[0]` indicating that keypoint index 0 (the holder) is to be grasped.
+- There are no keypoints to be released during the stage, so the `release_keypoints` list contains `[-1]`.

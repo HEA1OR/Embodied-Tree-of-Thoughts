@@ -1,0 +1,79 @@
+The task "Put the apple and the pen holder on the drawer, and the apple should be placed in the pen holder" involves the following stages:
+1. Grasp the pen holder.
+2. Place the pen holder on the drawer.
+3. Grasp the apple.
+4. Place the apple inside the pen holder.
+
+Thus, there are 4 stages involved in this task.
+
+```python
+import numpy as np
+
+num_stages = 4
+
+### stage 1 sub-goal constraints
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the pen holder (keypoint 2)."""
+    target_point = keypoints[2]
+    cost = np.linalg.norm(end_effector - target_point)
+    return cost
+
+### stage 1 path constraints (none for grasp stage)
+
+### stage 2 sub-goal constraints
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """The pen holder (keypoint 2) is placed on the drawer (keypoint 1)."""
+    offsetted_point = keypoints[1] + np.array([0, 0, 100])  # 100mm above the drawer surface
+    cost = np.linalg.norm(keypoints[2] - offsetted_point)
+    return cost
+
+### stage 2 path constraints
+def stage2_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen holder (keypoint 2)."""
+    return get_grasping_cost_by_keypoint_idx(2)
+
+### stage 3 sub-goal constraints
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the apple (keypoint 0)."""
+    target_point = keypoints[0]
+    cost = np.linalg.norm(end_effector - target_point)
+    return cost
+
+### stage 3 path constraints (none for grasp stage)
+
+### stage 4 sub-goal constraints
+def stage4_subgoal_constraint1(end_effector, keypoints):
+    """The apple (keypoint 0) is placed inside the pen holder (keypoint 2)."""
+    offsetted_point = keypoints[2] + np.array([0, 0, 50])  # 50mm above the pen holder surface
+    cost = np.linalg.norm(keypoints[0] - offsetted_point)
+    return cost
+
+### stage 4 path constraints
+def stage4_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the apple (keypoint 0)."""
+    return get_grasping_cost_by_keypoint_idx(0)
+
+"""
+Summarize keypoints to be grasped in all grasping stages.
+"""
+grasp_keypoints = [2, -1, 0, -1]
+
+"""
+Summarize at **the end of which stage** the robot should release the keypoints.
+"""
+release_keypoints = [-1, 2, -1, 0]
+```
+
+Explanation:
+- Stage 1: Grasp the pen holder (keypoint 2).
+  - Sub-goal: Align the end-effector with the pen holder (keypoint 2).
+  - No path constraints as it is the grasping stage.
+- Stage 2: Place the pen holder on the drawer (keypoint 1).
+  - Sub-goal: The pen holder (keypoint 2) should be placed 100mm above the drawer (keypoint 1).
+  - Path: The robot must still be grasping the pen holder (keypoint 2).
+- Stage 3: Grasp the apple (keypoint 0).
+  - Sub-goal: Align the end-effector with the apple (keypoint 0).
+  - No path constraints as it is the grasping stage.
+- Stage 4: Place the apple inside the pen holder (keypoint 2).
+  - Sub-goal: The apple (keypoint 0) should be placed 50mm above the pen holder (keypoint 2).
+  - Path: The robot must still be grasping the apple (keypoint 0).

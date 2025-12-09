@@ -1,0 +1,337 @@
+{
+    "metadata": {},
+    "state": {
+        "system_registry": {},
+        "object_registry": {
+            "floors_ptwlei_0": {
+                "root_link": {
+                    "pos": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ori": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            },
+            "xarm6": {
+                "root_link": {
+                    "pos": [
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "ori": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "joint_pos": [
+                    -9.17138640943449e-06,
+                    -0.5759837627410889,
+                    -1.0000187158584595,
+                    3.363356199770351e-06,
+                    1.5707969665527344,
+                    2.7634872822090983e-05,
+                    0.849999725818634,
+                    0.8499999642372131,
+                    0.8499991297721863,
+                    0.8499997854232788,
+                    0.8499999642372131,
+                    0.8499999642372131
+                ],
+                "joint_vel": [
+                    5.972209748961177e-08,
+                    1.6601983588770963e-05,
+                    -1.5150505532801617e-05,
+                    -1.2834578910769778e-07,
+                    1.6001205949578434e-05,
+                    9.616077711882554e-09,
+                    2.337345176783856e-05,
+                    -2.3582178432235423e-09,
+                    7.959219510667026e-05,
+                    1.7416448827134445e-05,
+                    -2.3609274535374425e-09,
+                    -1.6260524038358426e-09
+                ],
+                "joint_eff": [
+                    1.5560743804599042e-07,
+                    -6.250793944673205e-07,
+                    -2.893849568863516e-07,
+                    -2.1503475389206272e-10,
+                    -5.366268851503264e-08,
+                    3.1447733306322334e-11,
+                    4.0046694849138476e-09,
+                    5.597601271389863e-10,
+                    -3.464000197794803e-10,
+                    -1.1889481621452092e-09,
+                    -1.646453973158657e-09,
+                    2.528806331003608e-10
+                ],
+                "controllers": {
+                    "arm_0": {
+                        "goal_is_valid": true,
+                        "goal": {
+                            "target_pos": [
+                                0.3093670606613159,
+                                -2.1644543721777154e-06,
+                                0.3524184226989746
+                            ],
+                            "target_ori_mat": [
+                                [
+                                    0.999986469745636,
+                                    -3.697103966260329e-05,
+                                    0.005205197259783745
+                                ],
+                                [
+                                    -3.6952442314941436e-05,
+                                    -1.000000238418579,
+                                    -3.6691099012386985e-06
+                                ],
+                                [
+                                    0.005205197259783745,
+                                    3.4767153920256533e-06,
+                                    -0.9999866485595703
+                                ]
+                            ]
+                        }
+                    },
+                    "gripper_0": {
+                        "goal_is_valid": true,
+                        "goal": {
+                            "target": [
+                                1.0
+                            ]
+                        }
+                    }
+                },
+                "non_kin": {}
+            },
+            "desk": {
+                "root_link": {
+                    "pos": [
+                        0.6593576669692993,
+                        0.1541491150856018,
+                        0.7878884077072144
+                    ],
+                    "ori": [
+                        0.00013026416127104312,
+                        -9.625303937355056e-05,
+                        0.009745835326611996,
+                        0.999952495098114
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            },
+            "microwave": {
+                "root_link": {
+                    "pos": [
+                        0.38784322142601013,
+                        0.5174269676208496,
+                        1.1949738264083862
+                    ],
+                    "ori": [
+                        0.7057540416717529,
+                        0.045049939304590225,
+                        0.04519587382674217,
+                        0.7055771946907043
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "joint_pos": [
+                    -0.10684695094823837
+                ],
+                "joint_vel": [
+                    -0.00021201508934609592
+                ],
+                "joint_eff": [
+                    -4.5046908780932426e-07
+                ],
+                "non_kin": {}
+            },
+            "tennis1": {
+                "root_link": {
+                    "pos": [
+                        0.28566858172416687,
+                        0.15639127790927887,
+                        1.1389540433883667
+                    ],
+                    "ori": [
+                        0.08536990731954575,
+                        0.23683834075927734,
+                        -0.7978400588035583,
+                        0.5477872490882874
+                    ],
+                    "lin_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "ang_vel": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                },
+                "non_kin": {}
+            }
+        }
+    },
+    "init_info": {
+        "class_module": "omnigibson.scenes.interactive_traversable_scene",
+        "class_name": "InteractiveTraversableScene",
+        "args": {
+            "scene_model": "Rs_int",
+            "scene_instance": null,
+            "scene_file": "./xarm6_envs/short_1.json",
+            "trav_map_resolution": 0.1,
+            "default_erosion_radius": 0.0,
+            "trav_map_with_objects": true,
+            "num_waypoints": 10,
+            "waypoint_resolution": 0.2
+        }
+    },
+    "objects_info": {
+        "init_info": {
+            "floors_ptwlei_0": {
+                "class_module": "omnigibson.objects.dataset_object",
+                "class_name": "DatasetObject",
+                "args": {
+                    "name": "floors_ptwlei_0",
+                    "category": "floors",
+                    "model": "bryjan",
+                    "scale": [
+                        1.0,
+                        0.5,
+                        1.0
+                    ],
+                    "fixed_base": true,
+                    "in_rooms": [
+                        "living_room_0"
+                    ],
+                    "prim_path": "/World/floors_bryjan_0",
+                    "bddl_object_scope": null,
+                    "uuid": 62654673
+                }
+            },
+            "xarm6": {
+                "class_module": "omnigibson.robots.xarm6",
+                "class_name": "xarm6",
+                "args": {
+                    "name": "xarm6",
+                    "controller_config": {
+                        "arm_0": {
+                            "name": "OperationalSpaceController",
+                            "kp": 250,
+                            "kp_limits": [
+                                50,
+                                400
+                            ]
+                        },
+                        "gripper_0": {
+                            "name": "MultiFingerGripperController",
+                            "command_input_limits": [
+                                -1.0,
+                                1.0
+                            ],
+                            "mode": "binary"
+                        }
+                    },
+                    "action_normalize": false,
+                    "obs_modalities": [
+                        "rgb"
+                    ],
+                    "grasping_mode": "physical"
+                }
+            },
+            "desk": {
+                "class_module": "omnigibson.objects.dataset_object",
+                "class_name": "DatasetObject",
+                "args": {
+                    "name": "desk",
+                    "category": "desk",
+                    "model": "ccxuey",
+                    "scale": [
+                        1.399999976158142,
+                        1.2999999523162842,
+                        1.100000023841858
+                    ],
+                    "fixed_base": true
+                }
+            },
+            "microwave": {
+                "class_module": "omnigibson.objects.usd_object",
+                "class_name": "USDObject",
+                "args": {
+                    "name": "microwave",
+                    "usd_path": "/home/dell/workspace/xwj/Embodied-Tree-of-Thoughts/simworld/assets/cabinet/wave.usd",
+                    "scale": [
+                        0.36000001430511475,
+                        0.36000001430511475,
+                        0.36000001430511475
+                    ],
+                    "fixed_base": false
+                }
+            },
+            "tennis1": {
+                "class_module": "omnigibson.objects.usd_object",
+                "class_name": "USDObject",
+                "args": {
+                    "name": "tennis1",
+                    "usd_path": "/home/dell/workspace/xwj/Embodied-Tree-of-Thoughts/simworld/assets/tennis/tennis.usd",
+                    "scale": [
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033
+                    ]
+                }
+            }
+        }
+    }
+}

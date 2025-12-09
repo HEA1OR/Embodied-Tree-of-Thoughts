@@ -1,0 +1,112 @@
+The task "reorient the pen and drop it into a holder" involves 3 stages: "grasp pen", "reorient pen", and "drop pen into holder".
+
+Here is the breakdown and the constraints for each stage:
+
+num_stages = 3
+
+### stage 1 sub-goal constraints (grasp pen)
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the pen (keypoint 0)."""
+    return np.linalg.norm(end_effector - keypoints[0]) - 10  # Assuming 10mm is the allowed alignment error
+
+# No path constraints are needed for the grasping stage
+
+
+### stage 2 sub-goal constraints (reorient pen)
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """The pen (keypoint 0) is upright (parallel to the z-axis)."""
+    z_axis = np.array([0, 0, 1])
+    pen_orientation_vector = keypoints[0] - end_effector  # Assume the pen's other end is held by end-effector
+    pen_orientation_vector /= np.linalg.norm(pen_orientation_vector)  # Normalize the vector
+    return np.dot(pen_orientation_vector, z_axis) - 0.95  # Allowing a small orientation error
+
+def stage2_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen (keypoint 0)."""
+    return get_grasping_cost_by_keypoint_idx(0)
+
+### stage 3 sub-goal constraints (drop pen into holder)
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """The pen (keypoint 0) is 150mm above the holder opening (keypoint 1)."""
+    offsetted_position = keypoints[1] + np.array([0, 0, 150])
+    return np.linalg.norm(keypoints[0] - offsetted_position) - 10  # Allowing 10mm error for drop position
+
+def stage3_subgoal_constraint2(end_effector, keypoints):
+    """The pen (keypoint 0) must still stay upright (parallel to the z-axis)."""
+    z_axis = np.array([0, 0, 1])
+    pen_orientation_vector = keypoints[0] - end_effector
+    pen_orientation_vector /= np.linalg.norm(pen_orientation_vector)
+    return np.dot(pen_orientation_vector, z_axis) - 0.95
+
+def stage3_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen (keypoint 0)."""
+    return get_grasping_cost_by_keypoint_idx(0)
+
+### summarizing grasp keypoints and release keypoints:
+grasp_keypoints = [0, -1, -1]
+release_keypoints = [-1, -1, 0]
+
+```python
+# Your explanation of how many stages are involved in the task and what each stage is about.
+# The task "reorient the pen and drop it into holder" involves 3 stages:
+# Stage 1: Grasp the pen (keypoint 0)
+# Stage 2: Reorient the pen to be upright
+# Stage 3: Drop the pen into the holder (keypoint 1)
+
+num_stages = 3
+
+### stage 1 sub-goal constraints (grasp pen)
+def stage1_subgoal_constraint1(end_effector, keypoints):
+    """Align the end-effector with the pen (keypoint 0)."""
+    return np.linalg.norm(end_effector - keypoints[0]) - 10  # Assuming 10mm is the allowed alignment error
+
+# No path constraints are needed for grasping stage
+
+
+### stage 2 sub-goal constraints (reorient pen)
+def stage2_subgoal_constraint1(end_effector, keypoints):
+    """The pen (keypoint 0) is upright (parallel to the z-axis)."""
+    z_axis = np.array([0, 0, 1])
+    pen_orientation_vector = keypoints[0] - end_effector  # Assume the pen's other end is held by end-effector
+    pen_orientation_vector /= np.linalg.norm(pen_orientation_vector)  # Normalize the vector
+    return np.dot(pen_orientation_vector, z_axis) - 0.95  # Allowing a small orientation error
+
+### stage 2 path constraints (if any)
+def stage2_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen (keypoint 0)."""
+    return get_grasping_cost_by_keypoint_idx(0)
+
+### stage 3 sub-goal constraints (drop pen into holder)
+def stage3_subgoal_constraint1(end_effector, keypoints):
+    """The pen (keypoint 0) is 150mm above the holder opening (keypoint 1)."""
+    offsetted_position = keypoints[1] + np.array([0, 0, 150])
+    return np.linalg.norm(keypoints[0] - offsetted_position) - 10  # Allowing 10mm error for drop position
+
+def stage3_subgoal_constraint2(end_effector, keypoints):
+    """The pen (keypoint 0) must still stay upright (parallel to the z-axis)."""
+    z_axis = np.array([0, 0, 1])
+    pen_orientation_vector = keypoints[0] - end_effector
+    pen_orientation_vector /= np.linalg.norm(pen_orientation_vector)
+    return np.dot(pen_orientation_vector, z_axis) - 0.95
+
+### stage 3 path constraints (if any)
+def stage3_path_constraint1(end_effector, keypoints):
+    """The robot must still be grasping the pen (keypoint 0)."""
+    return get_grasping_cost_by_keypoint_idx(0)
+
+
+"""
+Summarize keypoints to be grasped in all grasping stages.
+The length of the list should be equal to the number of stages.
+For grasping stage, write the keypoint index. For non-grasping stage, write -1.
+"""
+grasp_keypoints = [0, -1, -1]
+
+"""
+Summarize at **the end of which stage** the robot should release the keypoints.
+The keypoint indices must appear in an earlier stage as defined in `grasp_keypoints` (i.e., a keypoint can only be released only if it has been grasped previously).
+Only release object when it's necessary to complete the task, e.g., drop bouquet in the vase.
+The length of the list should be equal to the number of stages.
+If a keypoint is to be released at the end of a stage, write the keypoint index at the corresponding location. Otherwise, write -1.
+"""
+release_keypoints = [-1, -1, 0]
+```

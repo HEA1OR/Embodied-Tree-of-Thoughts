@@ -1,0 +1,13 @@
+image: grasp/color2.png
+
+task: "a pen, an apple, a drawer and two holders"
+granularity1: 1.7
+granularity2: 1.8
+output: grasp/mask.npy
+response: grasp/response_grasp.txt
+filter:
+  corner: True
+  area: True
+  intersection: True
+  area_thresh: 150
+  intersection_thresh: 0.5
