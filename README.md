@@ -16,7 +16,7 @@ Embodied Tree of Thoughts: Deliberate Manipulation Planning with Embodied World 
 </h5>
 
 
-<div align="center"><video src="https://github.com/user-attachments/assets/9255280d-279f-4b62-b861-947b4ffd1927" width="800" autoplay loop muted></div>
+<div align="center"><video src="https://github.com/user-attachments/assets/6556564a-4380-4ae3-983e-38aca1be7030" width="800" autoplay loop muted></div>
 
 ## 🌟 Introduction
 
