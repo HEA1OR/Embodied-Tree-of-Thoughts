@@ -82,3 +82,16 @@ We have publicly released experimental videos for all tasks on [Google Drive](ht
 > - [ReKep](https://github.com/huangwl18/ReKep)
 > - [Enhanced_ReKep4xarm](https://github.com/youngfriday/Enhanced_ReKep4xarm/)
 > - *and several other open-source repositories.*
+
+## References
+```bibtex
+@misc{xu2025embodiedtreethoughtsdeliberate,
+  title={Embodied Tree of Thoughts: Deliberate Manipulation Planning with Embodied World Model}, 
+  author={Wenjiang Xu and Cindy Wang and Rui Fang and Mingkang Zhang and Lusong Li and Jing Xu and Jiayuan Gu and Zecui Zeng and Rui Chen},
+  year={2025},
+  eprint={2512.08188},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2512.08188}, 
+}
+```
