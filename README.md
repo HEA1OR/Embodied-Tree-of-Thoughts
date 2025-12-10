@@ -5,7 +5,7 @@ Embodied Tree of Thoughts: Deliberate Manipulation Planning with Embodied World 
 
 <h5 align="center">
 
-<a href="https://arxiv.org/abs/XXXX.XXXXX">
+<a href="https://arxiv.org/abs/2512.08188">
   <img src="https://img.shields.io/badge/arXiv-Paper-B31B1B.svg" alt="arXiv">
 </a>
 
